@@ -185,7 +185,7 @@ msgstr "恢复成功"
 
 #: inc/options/includes/class-options-framework-admin.php:289
 msgid "Options saved."
-msgstr "保持成功"
+msgstr "保存成功"
 
 #: inc/options/includes/class-options-media-uploader.php:62
 msgid "No file chosen"
