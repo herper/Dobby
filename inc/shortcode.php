@@ -32,6 +32,14 @@ function danger($atts, $content=null, $code="") {
 }
 add_shortcode('danger' , 'danger' );
 
+function title($atts, $content=null, $code="") {
+    $return = '<h2>';
+    $return .= $content;
+    $return .= '</h2>';
+    return $return;
+}
+add_shortcode('title' , 'title' );
+
 function wymusic($atts, $content=null, $code="") {
     $return = '<iframe style="width:100%" frameborder="no" border="0" marginwidth="0" marginheight="0" height=86 src="//music.163.com/outchain/player?type=2&id=';
     $return .= $content;
@@ -51,14 +59,31 @@ function download($atts, $content=null, $code="") {
 }
 add_shortcode('download' , 'download' );
 
+function img($atts, $content=null, $code="") {
+    $return = '<img class="alignnone" src="';
+    $return .= htmlspecialchars($content);
+    $return .= '" alt="" width="100%" height="auto" />';
+    return $return;
+}
+add_shortcode('img' , 'img' );
 
 function pre($atts, $content=null, $code="") {
+    $content = htmlspecialchars($content);
     $return = '<div class="code-highlight"><pre><code class="hljs">';
     $return .= ltrim($content, '\n');
     $return .= '</code></pre></div>';
     return $return;
 }
 add_shortcode('pre' , 'pre' );
+
+function code($atts, $content=null, $code="") {
+    $content = htmlspecialchars($content);
+    $return = '<div class="code-highlight"><pre><code class="hljs">';
+    $return .= ltrim($content, '\n');
+    $return .= '</code></pre></div>';
+    return $return;
+}
+add_shortcode('code' , 'code' );
 
 function kbd($atts, $content=null, $code="") {
     $return = '<kbd>';
@@ -246,3 +271,5 @@ function add_button_pre($mce_settings) {
     </script>
     <?php
 }
+
+// add_filter('comment_text', 'do_shortcode');

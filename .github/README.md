@@ -10,6 +10,8 @@ Within the download you'll find the following directories and files. You'll see 
 ```
 Dobby
 ├── 404.php
+├── LICENSE
+├── author.php
 ├── category.php
 ├── comments.php
 ├── footer.php
@@ -28,7 +30,24 @@ Dobby
 │   ├── global.php
 │   ├── images.php
 │   ├── navwalker.php
-│   ├── options(theme options)
+│   ├── options
+│   │   ├── css
+│   │   │   └── optionsframework.css
+│   │   ├── images
+│   │   │   ├── col-left.png
+│   │   │   ├── col-right.png
+│   │   │   ├── ico-delete.png
+│   │   │   └── single.png
+│   │   ├── includes
+│   │   │   ├── class-options-framework-admin.php
+│   │   │   ├── class-options-framework.php
+│   │   │   ├── class-options-interface.php
+│   │   │   ├── class-options-media-uploader.php
+│   │   │   └── class-options-sanitization.php
+│   │   ├── js
+│   │   │   ├── media-uploader.js
+│   │   │   └── options-custom.js
+│   │   └── options-framework.php
 │   ├── shortcode.php
 │   ├── single
 │   │   ├── single-alpha.php
@@ -40,6 +59,8 @@ Dobby
 │   └── widget.php
 ├── index.php
 ├── languages
+│   ├── zh_TW.mo
+│   ├── zh_TW.po
 │   ├── zh_CN.mo
 │   └── zh_CN.po
 ├── options.php
@@ -78,6 +99,7 @@ Dobby
 │   │   ├── search.svg
 │   │   └── smilies(has some smilie pic)
 │   └── js
+│       ├── bootstrap.min.js
 │       ├── comments.min.js
 │       ├── highlight.min.js
 │       ├── jquery.easing.min.js
@@ -95,7 +117,7 @@ Dobby
 
 ## License
 
-- The Lobby Html,CSS,JavaScript,and PHP files are licensed under the GNU General Public License v3:
+- The Dobby Html, CSS, JavaScript and PHP files are licensed under the GNU General Public License v3:
   - http://www.gnu.org/licenses/gpl-3.0.html
 
 - The Dobby documentation is licensed under the CC BY 4.0 License:

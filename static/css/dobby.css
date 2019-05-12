@@ -22,7 +22,9 @@
 11.0 Login
 12.0 Comments
 13.0 Widgets
-14.0 Footer
+14.0 Page
+	14.1 Author
+15.0 Footer
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
@@ -66,14 +68,14 @@ a:hover {
 }
 
 pre {
-	padding: 0.6rem 1rem;
-	font-size: 0.75rem;
-	line-height: 1.6;
-	word-break: break-all;
-	word-wrap: break-word;
-	color: #999999;
-	background-color: #f8f8f8;
-	border-radius: 0.25rem;
+    padding: 1.5rem 1rem;
+    font-size: 0.75rem;
+    line-height: 1.7;
+    word-break: break-all;
+    word-wrap: break-word;
+    color: #999999;
+    background-color: #f8f8f8;
+    border-radius: 0.25rem;
 }
 
 code {
@@ -167,6 +169,34 @@ kbd {
 
 .text-secondary {
 	color: #585858!important;
+}
+
+.wp-caption {
+	margin: 0;
+	max-width: 100%
+}
+
+.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto
+}
+
+.alignleft {
+	float: left;
+	margin: 0 1rem 0.5rem 0
+}
+
+.alignright {
+	float: right;
+	margin: 0 0 0.5rem 1rem
+}
+
+.wp-caption-text {
+	font-size: 14px;
+	color: #999;
+	text-align: center;
+	margin: 0
 }
 
 .breadcrumb {
@@ -389,6 +419,10 @@ kbd {
 	height: 11rem;
 	color: #fff;
 	background: center top no-repeat #eee;
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
 	width: 100%;
 }
 
@@ -950,10 +984,48 @@ kbd {
 	animation-fill-mode: both
 }
 
+.category-item .thumbnail {
+	min-height: 12rem;
+    position: relative;
+    display: block;
+    background-position: 50% 50%;
+    background-size: cover;
+}
+
+@media screen and (max-width: 1199px) {
+	.category-item .thumbnail {
+		min-height: 15rem;
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.category-item .thumbnail {
+		min-height: 12rem;
+	}
+}
+
 @media screen and (max-width: 768px) {
-	.alpha-item .text h3 {
+	.category-item .text h3 {
 		font-size: 1.125rem;
 		font-weight: 700;
+	}
+}
+
+@media screen and (max-width: 650px) {
+	.category-item .thumbnail {
+		min-height: 13rem;
+	}
+}
+
+@media screen and (max-width: 550px) {
+	.category-item .thumbnail {
+		min-height: 11rem;
+	}
+}
+
+@media screen and (max-width: 440px) {
+	.category-item .thumbnail {
+		min-height: 8.75rem;
 	}
 }
 
@@ -974,7 +1046,10 @@ kbd {
 	top: 0;
 	bottom: 0;
 	width: 100%;
-	background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
 }
@@ -986,8 +1061,8 @@ kbd {
 	top: 0;
 	right: 0;
 	bottom: 0;
-	background: rgba(0,0,0,.9);
-	opacity: .8
+	background: #000;
+	opacity: .3
 }
 
 .alpha-content .post-bar .meta {
@@ -1164,7 +1239,7 @@ kbd {
 5.1 Gamma list
 --------------------------------------------------------------*/
 
-.gamma-item:not(:first-child) {
+.gamma-list article:not(:first-child) {
 	margin-top: 1.25rem;
 }
 
@@ -1208,6 +1283,69 @@ kbd {
 	margin: 0
 }
 
+.aside-item {
+	border: none;
+	border-radius: .125rem;
+	background-color: #fff;
+	-webkit-box-shadow: 0 .0625rem .125rem rgba(0,0,0,.1);
+	-moz-box-shadow: 0 .0625rem .125rem rgba(0,0,0,.1);
+	box-shadow: 0 .0625rem .125rem rgba(0,0,0,.1);
+	-webkit-transition: all .6s ease;
+	-moz-transition: all .6s ease;
+	-o-transition: all .6s ease;
+	transition: all .6s ease;
+}
+
+.aside-item .card-thumb {
+	position: relative;
+	float: left;
+	overflow: hidden;
+	margin: 1.125rem;
+	width: 15rem
+}
+
+.aside-item .card-thumb .img-thumbnail {
+	padding: .1rem;
+	border: .0625rem solid #eee;
+	border-radius: .05rem
+}
+
+.aside-item .card-box {
+	margin-left: 16rem;
+	padding: 1.125rem;
+	height: 10rem
+}
+
+.aside-item .card-title {
+	font-size: 1.4rem;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	-webkit-box-orient: vertical;
+	display: -webkit-box;
+	-webkit-line-clamp: 1;
+}
+
+.aside-item .card-text {
+	display: -webkit-box;
+	overflow: hidden;
+	color: #3e4953;
+	text-overflow: ellipsis;
+	font-size: .95rem;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 4; 
+	max-height: 5.5rem;
+}
+
+.aside-item .card-footer {
+	padding: .45rem 1.25rem;
+	border-top: .0625rem solid #f3f3f3;
+	background-color: rgba(0,0,0,.01)
+}
+
+.aside-item .card-footer span a {
+	color: #748594;
+}
+
 @media screen and (max-width: 1199px) {
 	.gamma-item .thumb .thumbnail {
 		min-height: 11.5625rem;
@@ -1229,6 +1367,23 @@ kbd {
 	.gamma-item .thumb .thumbnail {
 		min-height: 16.25rem;
 		border-radius: 0.1875rem;
+	}
+
+	.aside-item .card-thumb {
+		float: none;
+		margin: 0;
+		width: auto;
+		height: auto
+	}
+
+	.aside-item .card-box {
+		margin-left: 0;
+		height: auto
+	}
+
+	.aside-item .card-thumb .img-thumbnail {
+		padding: 0;
+		border: none
 	}
 }
 
@@ -2731,7 +2886,47 @@ kbd {
 }
 
 /*--------------------------------------------------------------
-14.0 Footer
+14.1 Author page
+--------------------------------------------------------------*/
+
+.banner-panel {
+	height: 19rem;
+}
+
+.author-page .author {
+	margin: 0 auto;
+    position: relative;
+    left: inherit;
+    transform: inherit;
+}
+
+.author-page .author .authorimg {
+	width: 120px;
+    height: 120px;
+    border: 4px solid #ffffff;
+    background-color: #ffffff;
+    position: absolute;
+    left: 50%;
+    margin-left: -64px;
+    top: -65px;
+    overflow: hidden;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+}
+
+.author-page .content .name{
+	font-size: 24px;
+    color: #444444;
+}
+
+.author-page .content .motto{
+    font-size: 14px;
+    color: #666666;
+}
+
+/*--------------------------------------------------------------
+15.0 Footer
 --------------------------------------------------------------*/
 
 .footer {

@@ -26,6 +26,13 @@ function optionsframework_options() {
 		'type' => 'heading');
 
 	$options[] = array(
+		'name' => __( 'Function status' , 'dobby' ),
+		'desc' => __( 'Whether to enable the web compression?' , 'dobby' ),
+		'id' => 'global_html',
+		'std' => '0',
+		'type' => 'checkbox');
+
+	$options[] = array(
 		'name' => __( 'Navbar layout' , 'dobby' ),
 		'id' => "global_nav_layout",
 		'std' => "alpha",
@@ -174,6 +181,13 @@ function optionsframework_options() {
 	);
 
 	$options[] = array(
+		'name' => __( 'Default author images' , 'dobby' ),
+		'id' => 'image_default_author',
+		'std' => get_template_directory_uri() . '/static/images/default/author.png',
+		'type' => 'upload'
+	);
+
+	$options[] = array(
 		'name' => __( '404 images' , 'dobby' ),
 		'id' => 'image_default_404',
 		'std' => get_template_directory_uri() . '/static/images/default/404.png',
@@ -196,6 +210,18 @@ function optionsframework_options() {
 	));	
 
 	$options[] = array(
+		'name' => __( 'WeChat push' , 'dobby' ),
+		'desc' => __( 'Whether to enable Server Chan?' , 'dobby' ),
+		'id' => 'single_comment_sc',
+		'std' => '0',
+		'type' => 'checkbox');
+
+	$options[] = array(
+		'name' => __( 'SCKEY' , 'dobby' ),
+		'id' => 'single_comment_key',
+		'type' => 'text');
+
+	$options[] = array(
 		'name' => __( 'Index thumbnail' , 'dobby' ),
 		'id' => 'image_thumbnail_index',
 		'std' => get_template_directory_uri() . '/static/images/default/thumbnail.png',
@@ -213,7 +239,18 @@ function optionsframework_options() {
 		'name' => __( 'Copyright content' , 'dobby' ),
 		'id' => 'single_copyright',
 		'type' => 'text');
-	
+
+	$options[] = array(
+		'name' => __( 'Page Config' , 'dobby' ),
+		'type' => 'heading');
+			
+	$options[] = array(
+		'name' => __( 'Page permalink' , 'dobby' ),
+		'desc' => __( 'Whether to enable Page permalink?' , 'dobby' ),
+		'id' => 'page_html',
+		'std' => '0',
+		'type' => 'checkbox');
+
 	$options[] = array(
 		'name' => __( 'Mail Config' , 'dobby' ),
 		'type' => 'heading');
